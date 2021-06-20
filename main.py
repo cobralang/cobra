@@ -22,4 +22,4 @@ try:
         eval(code)
 except BaseException as error:
     print("An error occured in the Mamba runtime. Error: " + str(error) + " (In Python form, not Mamba form.)")
-    raise RuntimeError("Mamba error occured.")
+    raise RuntimeError("Mamba error occured. Please check the program.")
