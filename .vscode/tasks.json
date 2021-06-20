@@ -6,7 +6,7 @@
         {
             "label": "push",
             "type": "shell",
-            "command": "git push origin master",
+            "command": "git add . && git commit && git push origin master",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
