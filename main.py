@@ -15,9 +15,11 @@ try:
     def get(url, plaintext):
         if plaintext:
             mambagetobj = requests.get(url)
-            mambaget = requests.get(url)
+            mambaget = mambagetobj.text
+            return mambaget
         else:
             mambaget = requests.get(url)
+            return mambaget
     def execdyn(code):
         eval(code)
 except BaseException as error:
