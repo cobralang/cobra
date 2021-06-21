@@ -12,12 +12,16 @@ try:
         for mambaloopobject in range(times):
             exec(loopcode)
 
-    def get(url, plaintext, var):
+    def get(url, plaintext):
         if plaintext:
             mambagetobj = requests.get(url)
-            eval(var + " = mambagetobj.text")
+            mambaget = mambagetobj.text
+            return mambaget
         else:
-            eval(var + " = requests.get(url)")
+            mambaget = requests.get(url)
+            return mambaget
+    def execdyn(code):
+        eval(code)
 except BaseException as error:
     print("An error occured in the Mamba runtime. Error: " + str(error) + " (In Python form, not Mamba form.)")
-    raise RuntimeError("Mamba error occured.")
+    raise RuntimeError("Mamba error occured. Please check the program.")
