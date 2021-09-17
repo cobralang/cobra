@@ -23,15 +23,21 @@ try:
     def execdyn(code):
         eval(code)
 
+	
     def iosauth(correctusername, correctpassword, authname):
-        import console
-        while True:
-            mambaauth = console.login_alert(authname)
-            if auth == (correctusername, correctpassword)
-                sleep(0.2)
-                console.hud_alert("Signed in.")
-            else:
-                console.hud_alert("Try Again.", "error")
+        try:
+            import console
+            while True:
+                mambaauth = console.login_alert(authname)
+                if auth == (correctusername, correctpassword):
+                    sleep(0.2)
+                    console.hud_alert("Signed in.")
+                else:
+                    console.hud_alert("Try Again.", "error")
+        except:
+            pass
+
+              
                 
 except BaseException as error:
     print("An error occured in the Mamba runtime. Error: " + str(error) + " (In Python form, not Mamba form.)")
